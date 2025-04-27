@@ -14,8 +14,14 @@
 <div id="content">
   <div id="pomodoroContent" class="tabContent">
     <h2>Pomodoro Timer</h2>
-    <div id="timer">25:00</div>
+    <div class="timeInputContainer">
+      <input type="number" id="hoursInput" placeholder="Hours" min="0" max="23"> hrs
+      <input type="number" id="minutesInput" placeholder="Minutes" min="0" max="59"> min
+      <input type="number" id="secondsInput" placeholder="Seconds" min="0" max="59"> sec
+    </div>
+    <div id="timer">00:00:00</div>
     <button id="start">Start</button>
+    <button id="pause">Pause</button>
     <button id="reset">Reset</button>
   </div>
 

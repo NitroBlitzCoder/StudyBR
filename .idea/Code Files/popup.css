@@ -1,37 +1,123 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     padding: 10px;
+    width: 350px;
+    background: #121212;
+    color: #E0E0E0;
 }
 
 .tabs {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    background: #1E1E1E;
+    padding: 8px;
+    border-radius: 12px;
 }
 
 .tabButton {
-    padding: 8px;
+    padding: 10px;
     width: 30%;
+    background-color: #333;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.tabButton:hover, .tabButton.active {
+    background-color: #4CAF50;
+    color: white;
+    transform: scale(1.05);
 }
 
 .tabContent {
-    margin-top: 10px;
+    margin-top: 15px;
+    animation: fadeIn 0.5s;
 }
 
 #timer {
-    font-size: 40px;
+    font-size: 48px;
     text-align: center;
     margin: 20px 0;
+    color: #BB86FC;
+    animation: pulse 2s infinite;
+}
+
+.timeInputContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 10px;
+}
+
+#timeInput {
+    width: 60px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #1F1F1F;
+    color: #E0E0E0;
 }
 
 textarea {
-    width: 100%;
+    width: 95%;
     height: 120px;
     margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #1F1F1F;
+    color: #E0E0E0;
+    resize: none;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+    transform: scale(1.02);
+    outline: none;
 }
 
 button {
     margin-top: 10px;
     width: 100%;
-    padding: 8px;
+    padding: 12px;
+    background-color: #333;
+    color: #E0E0E0;
+    border: 1px solid #555;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    transform: scale(1.03);
+}
+
+#summaryResult {
+    margin-top: 10px;
+    background: #1F1F1F;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #B0BEC5;
+    border: 1px solid #555;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
