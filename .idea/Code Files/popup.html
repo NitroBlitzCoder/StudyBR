@@ -1,10 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <title>StudyBR</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+<div class="tabs">
+  <button class="tabButton" id="pomodoroTab">Pomodoro</button>
+  <button class="tabButton" id="summarizerTab">Summarizer</button>
+  <button class="tabButton" id="notesTab">Notes</button>
+</div>
 
+<div id="content">
+  <div id="pomodoroContent" class="tabContent">
+    <h2>Pomodoro Timer</h2>
+    <div id="timer">25:00</div>
+    <button id="start">Start</button>
+    <button id="reset">Reset</button>
+  </div>
+
+  <div id="summarizerContent" class="tabContent" style="display:none;">
+    <h2>Summarizer</h2>
+    <label>
+      <input type="checkbox" id="manualInputCheckbox">
+      Paste my own text
+    </label>
+    <textarea id="inputText" placeholder="Paste text here"></textarea>
+    <button id="summarize">Summarize</button>
+    <div id="summaryResult"></div>
+  </div>
+
+  <div id="notesContent" class="tabContent" style="display:none;">
+    <h2>Quick Notes</h2>
+    <textarea id="notesArea" placeholder="Write notes here"></textarea>
+    <button id="saveNotes">Save</button>
+  </div>
+</div>
+
+<script src="popup.js"></script>
 </body>
 </html>
