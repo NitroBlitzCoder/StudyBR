@@ -1,5 +1,5 @@
 # NOTE
-Make sure to get your own Gemini 2.0 Flash API key and the text in popup.js.
+Make sure to get your own Gemini 2.0 Flash API key and input it into  the text in popup.js.
 
 # Usages
 StudyBR aims to provide a seamless study experience by combining focus management, quick note-taking, and AI-powered page summarization. Whether you're reviewing a webpage, need a break between tasks, or just want to keep track of your notes, StudyBR makes it easy.
